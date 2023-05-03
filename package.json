@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,11 @@
   },
   "homepage": "https://github.com/d2ndjim/node-api-design#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "@prisma/client": "^4.13.0",
+    "@types/node": "^18.16.3",
+    "express": "^4.18.2",
+    "prisma": "^4.13.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
   }
 }
