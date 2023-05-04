@@ -18,7 +18,7 @@ export const createNewUser = async (req, res) => {
 
 export const signin = async (req, res) => {
   const user = await prisma.user.findUnique({
-    where: { id: req.body.username },
+    where: { username: req.body.username },
   });
 
   const isValid = await comparePasswords(req.body.password, user.password);
