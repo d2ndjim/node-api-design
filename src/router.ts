@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { body } from "express-validator";
 import { handleInputErrors } from './modules/middleware';
 import { createProduct, deleteProduct, getOneProduct, getProducts, updateProduct } from './handlers/product';
-// import { getUpdates } from './handlers/update';
+import { createUpdate, getOneUpdate, getUpdates, updateUpdate } from './handlers/update';
 
 const router = Router();
 
@@ -16,20 +16,18 @@ router.delete("/product/:id", deleteProduct);
  * Update
  */
 
-// router.get("/update", getUpdates);
-router.get("/update/:id", (req, res) => {});
+router.get("/update", getUpdates);
+router.get("/update/:id", getOneUpdate);
 router.post("/update", 
   [body("title").exists().isString(), 
     body("body").exists().isString(), 
-  ], handleInputErrors, (req, res) => {
-});
+  ], handleInputErrors, createUpdate);
 router.put("/update/:id", [body("title").optional(), 
     body("body").optional(), 
     body('status').isIn(["IN_PROGRESS", "LIVE", "DEPRECATED"]), 
     body("version").optional(),
-  ], handleInputErrors, (req, res) => { 
-});
-router.delete("/update/:id", (req, res) => {});
+  ], handleInputErrors, updateUpdate);
+router.delete("/update/:id", deleteProduct);
 
 /**
  * UpdatePoint
