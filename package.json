@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/d2ndjim/node-api-design#readme",
   "dependencies": {
-    "@prisma/client": "^4.13.0",
+    "@prisma/client": "^4.14.0",
     "@types/node": "^18.16.3",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
@@ -28,7 +28,7 @@
     "express-validator": "^7.0.1",
     "jsonwebtoken": "^9.0.0",
     "morgan": "^1.10.0",
-    "prisma": "^4.13.0",
+    "prisma": "^4.14.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   }

@@ -1,12 +1,11 @@
 import { Router } from 'express';
-import { body, oneOf } from "express-validator";
+import { body } from "express-validator";
 import { handleInputErrors } from './modules/middleware';
+import { getProducts } from './handlers/product';
 
 const router = Router();
 
-router.get("/product", (req, res) => {
-  res.json({ message: "product" });
-});
+router.get("/product", getProducts );
 
 router.get("/product/:id", (req, res) => {});
 
