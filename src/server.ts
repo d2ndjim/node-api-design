@@ -18,7 +18,7 @@ app.use(cors());
 // });
 
 app.get("/", (req, res) => {
-  console.log("GET /");
+  // console.log("GET /");
   res.status(200);
   res.json({ message: "Hello World!" });
 });
